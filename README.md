@@ -49,7 +49,29 @@ pod 'PimpMyString', '~> 1.0.0'
 - You can also build the framework and directly link it to your target.
 
 ## Usage
-Documentation coming soon.
+A sample code worth a thousand words (taken from the example playgrounds) :
+
+```swift
+import PMS
+
+let string = "Hello PMS !"
+
+let stringTuner = underliner
+    >>> pms_fgColor(UIColor.purpleColor())
+    >>> pms_bgColor(UIColor.blackColor())
+    >>> pms_font(UIFont.boldSystemFontOfSize(24))
+    >>> pms_fgColor(UIColor.orangeColor(), range: NSMakeRange(0, 1))
+    >>> pms_strikeThrough(UIColor.greenColor().colorWithAlphaComponent(0.5), NSUnderlineStyle.StyleSingle)
+    >>> pms_skew(0.3)
+    >>> pms_stroke(UIColor.brownColor(), 4)
+    >>> pms_effectLetterPress()
+
+let attributedString = stringTuner(NSAttributedString(string: string))
+
+// Do whatever you want with the attributed string.
+label.attributedText = attributedString
+```
+All attributes will be processed from left to right.
 
 ## Changelog
 ### 1.0.0
