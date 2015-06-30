@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: PimpMyString.xcodeproj
+xcode_scheme: "PimpMyString iOS" 
+xcode_sdk: iphonesimulator8.1
