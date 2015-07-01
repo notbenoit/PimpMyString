@@ -16,4 +16,6 @@ Pod::Spec.new do |s|
   s.osx.source_files = 'Source/OSX/*.swift'
 
   s.requires_arc = true
+
+  s.module_name = 'PMS'
 end
