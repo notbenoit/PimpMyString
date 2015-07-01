@@ -49,6 +49,7 @@ pod 'PimpMyString', '~> 1.0.0'
 - You can also build the framework and directly link it to your target.
 
 ## Usage
+Just import PMS in your source file, and call the StringTuner(s) you need.
 A sample code worth a thousand words (taken from the example playgrounds) :
 
 ```swift
