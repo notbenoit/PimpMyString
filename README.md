@@ -1,6 +1,9 @@
 ![PMS](https://raw.githubusercontent.com/notbenoit/notbenoit.github.io/master/images/pms/pms.png)
 
 [![Build Status](https://travis-ci.org/notbenoit/PimpMyString.svg?branch=master)](https://travis-ci.org/notbenoit/PimpMyString)
+![Cocoapods Compatible](https://img.shields.io/badge/pod-v1.0.0-blue.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 
 # PimpMyString
 PimpMyString is an iOS/OSX wrapper around NSAttributedStrong. It has the advantage of being strongly typed while NSStringAdditions are not.
