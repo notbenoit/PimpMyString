@@ -77,6 +77,10 @@ label.attributedText = attributedString
 ```
 All attributes will be processed from left to right.
 
+![Example](https://raw.githubusercontent.com/notbenoit/notbenoit.github.io/master/images/pms/example.png)
+
+Ok, I'm not an artist, but whatever....
+
 ## Changelog
 ### 1.0.0
 Initial version
