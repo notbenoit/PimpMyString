@@ -57,7 +57,7 @@ import PMS
 
 let string = "Hello PMS !"
 
-let stringTuner = underliner
+let stringTuner = pms_underline(UIColor.redColor(), .StyleDouble)
     >>> pms_fgColor(UIColor.purpleColor())
     >>> pms_bgColor(UIColor.blackColor())
     >>> pms_font(UIFont.boldSystemFontOfSize(24))
@@ -84,4 +84,4 @@ Initial version
 
 ## License
 
-PimpMyString is released under the BSD license. See LICENSE for details.
+PimpMyString is released under the New BSD License. See LICENSE for details.
