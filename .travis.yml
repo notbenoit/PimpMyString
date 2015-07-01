@@ -1,4 +1,8 @@
+osx_image: beta-xcode6.3
 language: objective-c
-xcode_project: PimpMyString.xcodeproj
-xcode_scheme: "PimpMyString iOS" 
-xcode_sdk: iphonesimulator8.1
+before_install:
+- gem install xcpretty
+script:
+- set -o pipefail
+- xcodebuild -scheme PimpMyString\ OSX clean build | xcpretty -c
+- xcodebuild -scheme PimpMyString\ iOS -sdk iphonesimulator8.3 -destination "OS=8.3,name=iPhone 6 Plus" -configuration Debug ONLY_ACTIVE_ARCH=NO clean build | xcpretty -c
