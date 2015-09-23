@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'PimpMyString'
-  s.version = '1.0.0'
+  s.version = '1.1.0'
   s.license = 'New BSD License'
   s.summary = 'iOS/MacOS functional wrapper around NSAttributedString.'
   s.homepage = 'https://github.com/notbenoit/PimpMyString'
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/notbenoit/PimpMyString.git', :tag => s.version }
 
   s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.9'
+  s.osx.deployment_target = '10.10'
 
   s.source_files = 'Source/Common/*.swift'
   s.ios.source_files = 'Source/iOS/*.swift'
