@@ -76,5 +76,5 @@ the text to draw.
 :returns: A StringTuner to stroke the text.
 */
 public func pms_stroke(color: NSColor, width: Float, range: NSRange? = nil) -> StringTuner {
-    return stroke(color, width, range: range)
+    return stroke(color, width: width, range: range)
 }

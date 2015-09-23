@@ -26,7 +26,7 @@
 
 import Foundation
 
-// Because I can't force anyone to use the 'Color' type, this us only used internally.
+// Because I can't force anyone to use the 'Color' type, this is only used internally.
 #if os(iOS)
     import UIKit
     typealias Color = UIColor
@@ -51,68 +51,68 @@ public func >>> (left: StringTuner, right: StringTuner) -> StringTuner {
 Use this function to apply multiple 
 attributes to a range of text.
 
-:param: style The paragraph style to apply.
-:param: range An optional range where the attributes will be applied. No range means the whole string.
+- parameter style: The paragraph style to apply.
+- parameter range: An optional range where the attributes will be applied. No range means the whole string.
 
-:returns: A StringTuner to apply the paragraph style to the text.
+- returns: A StringTuner to apply the paragraph style to the text.
 */
 public func pms_paragraphStyle(style: NSParagraphStyle, range: NSRange? = nil) -> StringTuner {
-    return { ats in return addAttribute(ats, NSParagraphStyleAttributeName, style, range: range) }
+    return { ats in return addAttribute(ats, attr: NSParagraphStyleAttributeName, value: style, range: range) }
 }
 
 /**
 This function apply a skew to the text.
 
-:param: skew  Skew to be applied.
-:param: range An optional range where the attributes will be applied. No range means the whole string.
+- parameter skew:  Skew to be applied.
+- parameter range: An optional range where the attributes will be applied. No range means the whole string.
 
-:returns: A StringTuner to apply a skew to the glyphs
+- returns: A StringTuner to apply a skew to the glyphs
 */
 public func pms_skew(skew: Float, range: NSRange? = nil) -> StringTuner {
-    return { ats in return addAttribute(ats, NSObliquenessAttributeName, skew, range: range) }
+    return { ats in return addAttribute(ats, attr: NSObliquenessAttributeName, value: skew, range: range) }
 }
 
 /**
 Changes the baseline by offsetting it by the amount given in parameter
 
-:param: offset By how much the baseline should be offset.
-:param: range  An optional range where the attributes will be applied. No range means the whole string.
+- parameter offset: By how much the baseline should be offset.
+- parameter range:  An optional range where the attributes will be applied. No range means the whole string.
 
-:returns: A StringTuner to apply an offset to the baseline
+- returns: A StringTuner to apply an offset to the baseline
 */
 public func pms_baselineOffset(offset: Float, range: NSRange? = nil) -> StringTuner {
-    return { ats in return addAttribute(ats, NSBaselineOffsetAttributeName, offset, range: range) }
+    return { ats in return addAttribute(ats, attr: NSBaselineOffsetAttributeName, value: offset, range: range) }
 }
 
 /**
 Applies an special effect to the letters.
 
-:param: range An optional range where the attributes will be applied. No range means the whole string.
+- parameter range: An optional range where the attributes will be applied. No range means the whole string.
 
-:returns: A StringTuner to apply the letterpress effect.
+- returns: A StringTuner to apply the letterpress effect.
 */
 public func pms_effectLetterPress(range: NSRange? = nil) -> StringTuner {
-    return { ats in return addAttribute(ats, NSTextEffectAttributeName, NSTextEffectLetterpressStyle, range: range) }
+    return { ats in return addAttribute(ats, attr: NSTextEffectAttributeName, value: NSTextEffectLetterpressStyle, range: range) }
 }
 
 // MARK: - Implementation
 internal func font(font: Font, range: NSRange? = nil) -> StringTuner {
-    return { ats in return addAttribute(ats, NSFontAttributeName, font, range: range) }
+    return { ats in return addAttribute(ats, attr: NSFontAttributeName, value: font, range: range) }
 }
 
 internal func fgColor(color: Color, range: NSRange? = nil) -> StringTuner {
-    return { ats in return addAttribute(ats, NSForegroundColorAttributeName, color, range: range) }
+    return { ats in return addAttribute(ats, attr: NSForegroundColorAttributeName, value: color, range: range) }
 }
 
 internal func bgColor(color: Color, range: NSRange? = nil) -> StringTuner {
-    return { ats in return addAttribute(ats, NSBackgroundColorAttributeName, color, range: range) }
+    return { ats in return addAttribute(ats, attr: NSBackgroundColorAttributeName, value: color, range: range) }
 }
 
 internal func stroke(color: Color, width: Float, range: NSRange? = nil) -> StringTuner {
     return {
         ats in
-        var ret = addAttribute(ats, NSStrokeColorAttributeName, color, range: range)
-        ret = addAttribute(ret, NSStrokeWidthAttributeName, width, range: range)
+        var ret = addAttribute(ats, attr: NSStrokeColorAttributeName, value: color, range: range)
+        ret = addAttribute(ret, attr: NSStrokeWidthAttributeName, value: width, range: range)
         return ret
     }
 }
