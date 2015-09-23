@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'PimpMyString'
-  s.version = '1.0.0'
+  s.version = '1.1.0'
   s.license = 'New BSD License'
   s.summary = 'iOS/MacOS functional wrapper around NSAttributedString.'
   s.homepage = 'https://github.com/notbenoit/PimpMyString'
